@@ -1,0 +1,15 @@
+<h2>Welcome to the Phones index page!</h2>
+
+<% unless @phones.nil? %>
+
+  <% @phones.each do |phone| %>
+    <h3>Phone Name:</h3>
+    <div><%= phone.name %></div>
+
+    <h3>Phone Brand:</h3>
+    <div><%= phone.brand %></div>
+  <% end %>
+
+<% end %><hr>
+
+<%= will_paginate @phones %>
